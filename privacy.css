@@ -15,7 +15,7 @@
   margin: 0 0 8px;
   font: var(--text-h2);
 }
-.privacy-column h1 { font: var(--text-h1); margin-bottom: 8px; }
+.privacy-column h1 { font: 700 24px/1.5 var(--font-serif); margin-bottom: 8px; }
 .privacy-column h2 { margin-top: 26px; }
 .privacy-column h3 { margin: 24px 0 0; font: var(--text-body); line-height:1.5; }
 .privacy-column p { margin: 0 0 20px; }
