@@ -1,0 +1,65 @@
+/* design-system.css */
+:root {
+  /* 🎨 Color Tokens (from Figma) */
+  --color-primary: #D5B2FF;
+  --color-secondary: #BBF6D7;
+  --color-bg-main: #F1F7F8;
+  --color-bg-secondary: #181818; 
+  --color-bg-card: #F1F7F8; 
+  --color-text-dark: #181818;
+  --color-text-light: #F1F7F8;
+  --color-button-normal: #BBF6D7;
+
+  /* 📏 Spacing Scale (Figma Auto-Layout Padding/Gap) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* 🔤 Typography (Figma Text Styles) */
+  --font-main: 'Muli', Bembo Book MT Pro;
+  --text-h1: 700 24px/1.5 var(--font-main);
+  --text-h2: 400 18px/1.5 var(--font-main);
+  --text-body: 600 16px/1.5 var(--font-main);
+  --text-small: 400 12px/1.5 var(--font-main);
+
+  /* ✨ Surface Tokens */
+  --radius-sm: 12px;
+  --radius-md: 15px;
+  --radius-lg: 25px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+}
+/* Layout Primitives (Emulating Figma Auto-Layout) */
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+
+/* Component Primitives */
+.card-base {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background: var(--color-button-normal);
+  color: #181818;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font: var(--text-small);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,164 @@
+@font-face {
+  font-family: Muli;
+  src: url("fonts/Muli-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Muli;
+  src: url("fonts/Muli-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Bembo;
+  src: url("fonts/BemboBookMTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+:root { --font-main: Muli, Arial, sans-serif; --font-serif: Bembo, Georgia, serif; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--color-text-dark);
+  background: var(--color-bg-main);
+  font-family: var(--font-main);
+}
+a { color: inherit; }
+.site-header {
+  min-height: 82px;
+  justify-content: space-between;
+  padding: 0 4.05vw;
+  background: var(--color-bg-main);
+}
+.brand, .nav a {
+  color: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.brand { letter-spacing: -.02em; }
+.nav a:hover { color: var(--color-primary); }
+.support-layout {
+  align-items: flex-start;
+  padding: 46px 4.05vw 110px;
+  gap: 4.05vw;
+  color: var(--color-text-light);
+  background: var(--color-bg-secondary);
+}
+.faq-column, .contact-column { flex: 1 1 0; min-width: 0; }
+.faq-column { gap: 54px; }
+.faq-column h1 {
+  margin: 0;
+  font: var(--text-h1);
+}
+.contact-column h2 { margin:0; font:var(--text-h2); }
+.intro {
+  max-width: 900px;
+  margin: 0;
+  font: var(--text-body);
+  line-height: 1.55;
+}
+.faq-list { width: 100%; gap: 44px; }
+.faq-item {
+  width: 100%;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  color: var(--color-text-dark);
+  background: var(--color-bg-card);
+  box-shadow: none;
+}
+.faq-item summary {
+  position: relative;
+  display: block;
+  padding-right: 32px;
+  font: var(--text-body);
+  line-height: 1.4;
+  list-style: none;
+  cursor: pointer;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1;
+}
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p {
+  margin: 30px 0 0;
+  font: 400 16px/1.5 var(--font-main);
+  line-height: 1.55;
+}
+.faq-item var { font-style: italic; }
+.contact-column { gap: 136px; }
+.contact-form { gap: 16px; }
+.name-fields { align-items: flex-start; gap: 5%; }
+.field { flex: 1 1 0; min-width: 0; color: var(--color-text-light); font: var(--text-body); line-height: 1.25; }
+.field input, .field textarea {
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 15px 12px;
+  color: var(--color-text-dark);
+  background: var(--color-bg-main);
+  font: var(--text-body);
+  line-height: 1.4;
+}
+.field input { min-height: 57px; }
+.field input::placeholder, .field textarea::placeholder { color: var(--color-text-dark); opacity: .3; }
+.field input:focus, .field textarea:focus { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+.message-field { margin-top: 124px; }
+.field textarea { min-height: 225px; resize: vertical; }
+.form-actions { align-items: flex-end; margin-top: 12px; gap: 26px; }
+.form-actions p { margin: 0; text-align: right; font: var(--text-small); line-height: 1.35; }
+.privacy-policy { text-decoration: underline; text-underline-offset: 3px; }
+.form-actions .btn-primary { min-width: 138px; min-height: 57px; font: var(--text-body); }
+.page-end { min-height: 72px; background: var(--color-bg-main); }
+.site-footer {
+  display:flex;
+  min-height:44px;
+  align-items:center;
+  justify-content:center;
+  padding:10px 20px;
+  color:var(--color-text-light);
+  background:var(--color-bg-secondary);
+  font:var(--text-small);
+  text-align:center;
+}
+.form-status { min-height:1.5em; margin:0; text-align:right; font:var(--text-small); }
+.form-status[data-state="error"] { color:#ffb8ad; }
+.honey-field { position:absolute; left:-10000px; width:1px; height:1px; }
+@media (max-width: 900px) {
+  .site-header { min-height: 68px; padding-inline: 24px; }
+  .brand, .nav a { font-size: 16px; }
+  .brand, .nav a { display: inline-flex; min-height: 44px; align-items: center; }
+  .support-layout { flex-direction: column; gap: 64px; padding: 36px 24px 72px; }
+  .faq-column, .contact-column { width: 100%; }
+  .faq-column { gap: 30px; }
+  .faq-column h1 { font-size: 24px; }
+  .faq-list { gap: 18px; }
+  .faq-item { padding: 18px; }
+  .faq-item p { margin-top: 20px; }
+  .contact-column { gap: 32px; }
+  .message-field { margin-top: 26px; }
+  .field input, .field textarea { font-size: 16px; }
+  .field textarea { min-height: 190px; }
+  .page-end { min-height: 40px; }
+}
+@media (max-width: 520px) {
+  .support-layout { padding-inline: 18px; }
+  .name-fields { flex-direction: column; gap: 16px; }
+  .name-fields .field { width: 100%; }
+  .form-actions p { font-size: 12px; }
+  .form-actions .btn-primary { min-width: 120px; min-height: 50px; }
+}
+@media (max-width: 720px) {
+  .brand, .nav a { font-size:14px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

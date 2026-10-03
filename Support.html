@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F1F7F8">
+  <meta name="description" content="PulseBurst support, frequently asked questions, and contact form.">
+  <title>Support — BioSync</title>
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="support.css">
+</head>
+<body>
+  <header class="site-header row">
+    <a class="brand" href="index.html">BioSync</a>
+    <nav class="nav row gap-lg" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="support-layout row gap-xl">
+    <section class="faq-column stack" aria-labelledby="faq-title">
+      <h1 id="faq-title">FAQs</h1>
+      <p class="intro">Your most frequently asked questions are all in one place. If you don’t see what you need,<br>Leave us a message on the right.</p>
+      <div class="faq-list stack gap-lg">
+        <details class="faq-item card-base" open>
+          <summary>Do I have to wear an Apple Watch to play PulseBurst?</summary>
+          <p>Yes. In order to play the game or exercise control over your heart rate, you need an Apple Watch. Otherwise, you can only join group games as a spectator to watch your friends play.</p>
+        </details>
+        <details class="faq-item card-base">
+          <summary>How is my game score calculated for each match?</summary>
+          <p>Game Score is calculated as: mean round time (7 rounds) multiplied by 10, then divided by <var>n</var>. The value of <var>n</var> is a power function of your Heart Rate Range (HRR) during the match—the bigger your HRR, the bigger <var>n</var>. The lower your score, the higher your rank.</p>
+        </details>
+        <details class="faq-item card-base">
+          <summary>What’s the cap of players and spectators for a group game?</summary>
+          <p>A group game supports up to 6 players and 3 spectators, with a minimum of 2 players. Spectators don’t need to wear an Apple Watch to join a game.</p>
+        </details>
+        <details class="faq-item card-base">
+          <summary>Is there a world rank list for all players in terms of solo and group game?</summary>
+          <p>We don’t have a worldwide rank list for now, but we are planning to add that feature in the near future.</p>
+        </details>
+        <details class="faq-item card-base">
+          <summary>Will there be new games added to PulseBurst in the future after my purchase? Will that be free?</summary>
+          <p>We plan to add new games to PulseBurst with similar dynamics related to heart rate or other readings, but the timeline is to be determined, depending on the ideas we come up with. Once new games are added, they will be free for all purchasers. PulseBurst is a one-time purchase app with no subscription fees.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact-column stack" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Leave Us a Message</h2>
+      <form class="contact-form stack" id="support-contact-form" action="https://formsubmit.co/ajax/funbiosync@hotmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New BioSync support message">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" class="honey-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="name-fields row gap-lg">
+          <label class="field stack gap-sm">First Name
+            <input type="text" name="First name" autocomplete="given-name" placeholder="Enter your first name here" required>
+          </label>
+          <label class="field stack gap-sm">Last Name
+            <input type="text" name="Last name" autocomplete="family-name" placeholder="Enter your last name here" required>
+          </label>
+        </div>
+        <label class="field stack gap-sm">Email
+          <input type="email" name="Email" autocomplete="email" placeholder="Enter your email" required>
+        </label>
+        <label class="field message-field stack gap-sm">What’s your message for us
+          <textarea name="Message" placeholder="We are glad to know...." required></textarea>
+        </label>
+        <div class="form-actions stack gap-lg">
+          <p>By clicking the submit button,<br>you agree to PulseBurst’s <a href="Privacy.html">Privacy Policy</a>.</p>
+          <button class="btn-primary" type="submit">Submit</button>
+        </div>
+        <p class="form-status" id="support-form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><span>COPYRIGHT©2026 BioSync</span></footer>
+  <script src="support-contact.js" defer></script>
+</body>
+</html>

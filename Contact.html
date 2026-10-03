@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F1F7F8">
+  <meta name="description" content="Contact BioSync about PulseBurst.">
+  <title>Contact — BioSync</title>
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="support.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header class="site-header row">
+    <a class="brand" href="index.html">BioSync</a>
+    <nav class="nav row gap-lg" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="Support.html">Support</a>
+    </nav>
+  </header>
+
+  <main class="contact-page" id="contact">
+    <h1>Leave Us a Message</h1>
+    <form class="contact-form stack" id="contact-form" action="https://formsubmit.co/ajax/funbiosync@hotmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New BioSync website message">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" class="honey-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="name-fields row gap-lg">
+        <label class="field stack gap-sm">First Name
+          <input type="text" name="First name" autocomplete="given-name" placeholder="Enter your first name here" required>
+        </label>
+        <label class="field stack gap-sm">Last Name
+          <input type="text" name="Last name" autocomplete="family-name" placeholder="Enter your last name here" required>
+        </label>
+      </div>
+      <label class="field stack gap-sm">Email
+        <input type="email" name="Email" autocomplete="email" placeholder="Enter your email" required>
+      </label>
+      <div class="name-fields row gap-lg">
+        <label class="field stack gap-sm">Company or Team
+          <input type="text" name="Company or team" autocomplete="organization" placeholder="Enter your company or team">
+        </label>
+        <label class="field stack gap-sm">Job Function
+          <input type="text" name="Job function" autocomplete="organization-title" placeholder="Enter your job function">
+        </label>
+      </div>
+      <label class="field message-field stack gap-sm">What’s your message for us
+        <textarea name="Message" placeholder="We are glad to know...." required></textarea>
+      </label>
+      <div class="form-actions stack gap-lg">
+        <p>By clicking the submit button,<br>you agree to BioSync’s <a href="Privacy.html">Privacy Policy</a>.</p>
+        <button class="btn-primary" type="submit">Submit</button>
+      </div>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <footer class="site-footer"><span>COPYRIGHT©2026 BioSync</span></footer>
+  <script src="contact.js" defer></script>
+</body>
+</html>
