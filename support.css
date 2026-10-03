@@ -51,9 +51,9 @@ a { color: inherit; }
 .faq-column { gap: 54px; }
 .faq-column h1 {
   margin: 0;
-  font: var(--text-h1);
+  font: 700 24px/1.5 var(--font-serif);
 }
-.contact-column h2 { margin:0; font:var(--text-h2); }
+.contact-column h2 { margin:0; font:700 24px/1.5 var(--font-serif); }
 .intro {
   max-width: 900px;
   margin: 0;

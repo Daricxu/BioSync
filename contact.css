@@ -7,7 +7,7 @@
 .contact-page h1 {
   width: min(100%, 864px);
   margin: 0 auto;
-  font: var(--text-h1);
+  font: 700 24px/1.5 var(--font-serif);
 }
 .contact-page .contact-form {
   width: min(100%, 864px);
